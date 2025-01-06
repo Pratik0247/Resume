@@ -1,0 +1,262 @@
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[letter,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry} % Added geometry for margin control
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{-0.25in}
+% \addtolength{\evensidemargin}{-0.3in}
+% \addtolength{\textwidth}{0.5in}
+% \addtolength{\topmargin}{-0.55in}
+% \addtolength{\textheight}{1in}
+
+% Geometry package for setting uniform margins
+\geometry{
+  a4paper,
+  left=0.5in,   % Set left margin
+  right=0.5in,  % Set right margin
+  top=0.5in,     % Set top margin
+  bottom=0.5in     % Set bottom margin
+}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+  % \vspace{-3pt}
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-8pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label={--}, leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Pratik Sanjay Bhirud}} 
+  & Mobile:~~~+1 (303)-557-8495 
+  \\ \href{https://www.linkedin.com/in/pratik-bhirud/}{LinkedIn: https://www.linkedin.com/in/pratik-bhirud/} 
+  & Email: \href{mailto:}{pratik.bhirud@colorado.edu} 
+  \\ & \href{https://github.com/Pratik0247}{Github: ~~github.com/Pratik0247} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\vspace{-10pt}
+\section{~~Education}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {University of Colorado, Boulder}{Colorado, USA}
+      {Master of Science - Computer Science; GPA: 4.0}{August 2024 - May 2026}
+        % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Datacenter Scale Computing, Data Mining}}}
+      \vspace{-2pt}
+    \resumeSubheading
+      {BITS Pilani, KK Birla Goa Campus}{Goa, India}
+      {Bachelor of Engineering - Computer Science;  GPA: 3.54}{August 2018 - July 2022}
+      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Object Oriented Programming, Data structures and algorithms, Database systems, Operating Systems, Artificial Intelligence, Information Retrieval, Software Development for Portable Devices}}}
+      \vspace{-5pt}
+    \resumeSubHeadingListEnd
+
+%-----------Skills Summary-----------------
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~Java, C++, Python, SQL, Bash }
+	\resumeSubItem{Frameworks}{~Hive, Calcite, Avatica, JDBC, Spark, Delta Lake, Parquet, Iceberg, REST APIs, Junit, Cucumber, Robot Framework, Py4J, Android, Flask, Docker}
+        \resumeSubItem{Tools}{Maven, Gradle, Git, Prometheus, Grafana, YAML, JSON, IntelliJ, Android Studio, PyCharm}
+        \resumeSubItem{Databases}{PostgreSQL, MySQL, Redis}
+        \resumeSubItem{Cloud and Distributed Computing}{Kubernetes, AWS, Glue, EC2, RDS, GCP, Google Cloud Compute, Google Cloud Storage (GCS), Google Kubernetes Engine (GKE), RabbitMQ, Databricks}
+        \resumeSubItem{Operating Systems}{Linux, MacOS, Windows}
+
+\resumeSubHeadingListEnd
+
+
+%-----------Experience-----------------
+\vspace{5pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{DataPelago India Pvt Ltd}{Hyderabad, India}
+    {Member of Technical Staff}{February 2023 - August 2024}
+    \resumeItemListStart
+        \resumeItem{Metastore Service Integration}{ Integrated a Hive Metastore service with the query planner, enabling storage and incorporation of table statistics into query planning and simplifying adding new table catalog types.}
+
+
+        \resumeItem{Metastore API Improvements}{ Designed and built a new Metastore API, optimizing the handling of table statistics, improving code maintainability, and reducing database connection setup time by over \textbf{95\%}.}
+
+
+        \resumeItem{Metadata cache implementation}{Developed a caching mechanism for the SQL query planner, enforcing repeatable-read isolation and reducing query planning time by over \textbf{50\%}.}
+
+        
+        \resumeItem{Support for Delta Lake tables}
+        {Engineered robust transaction management for Delta Lake (INSERT, UPDATE, DELETE) and optimized read operations for enhanced performance.}
+
+        
+        \resumeItem{ANALYZE command implementation}{Designed and implemented the SQL ANALYZE command to compute table statistics and generate highly efficient execution plans, significantly improving query performance.}
+        
+        \resumeItem{DataPelago JDBC Driver}{Developed a custom JDBC driver with proprietary features to boost connectivity and provide functionality beyond the open-source offering from Apache Calcite Avatica.}
+    \resumeItemListEnd    
+    
+    \resumeSubheading
+		{Dremio Corporation.}{Hyderabad, India (Remote)}
+		{Software Engineer}{August 2022 -  February 2023}
+    \resumeItemListStart
+        \resumeItem{COPY INTO command}
+          {Engineered the \texttt{COPY INTO <table>} feature, which \textbf{consolidates a multistep data ingestion pipeline into a single command}, significantly improving user experience and efficiency in importing raw data into Dremio.}
+    \resumeItemListEnd
+
+    \vspace{2pt}
+    \resumeSubheading
+    	{VMWare Inc.}{Bangalore, India}
+    	{MTS Intern}{January 2022 - June 2022}
+    \resumeItemListStart
+        \resumeItem{Test Automation Framework}
+          {Designed and prototyped a scalable, intent-driven test automation framework for VMWare's Telco Cloud Automation, to reduce manual testing effort and increase test coverage.}
+        \resumeItemWithoutTitle{}{Researched and analyzed technologies like YAML, Py4J, Cucumber, and Robot Framework to find an optimal solution.}
+    \resumeItemListEnd
+
+
+  %   \resumeSubheading
+		% {Dremio Corporation}{Hyderabad, India}
+		% {SDE Intern}{May 2021 -  August 2021}
+  %   \resumeItemListStart
+  %       \resumeItem{Delta Lake performance improvement}
+  %         {Optimized SQL query performance for Delta Lake tables by leveraging dataset metadata to identify and bypass unnecessary data files, significantly improving query efficiency under filtering conditions.}
+  %   \resumeItemListEnd
+
+    
+  %   \resumeSubheading
+		% {National Informatics Centre}{New Delhi, India}
+		% {Summer Intern}{May 2020 - June 2020}
+  %   \resumeItemListStart
+  %       \resumeItem{Application Security Compliance System}
+  %         {Upgraded NIC’s Application Security Compliance System with CentOS 8 support and automated XML report generation, \textbf{reducing audit time from hours to minutes} and improving overall compliance checking efficiency.}
+  %   \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% -----------Projects-----------------
+% \vspace{-5pt}
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeSubheading{NarrateNow}{}{Chapter-wise Audiobook Generation Service}{}
+\resumeSubHeadingListEnd
+\resumeItemListStart
+    \resumeItem{Project Overview}{Built a scalable platform to convert EPUB e-books into chapter-wise audiobooks using containerized microservices, leveraging \textbf{Google Text-To-Speech API}, \textbf{RabbitMQ}, and \textbf{Redis}.}
+    \vspace{-5pt}
+    \resumeItem{Event-driven}{Designed and implemented an event-driven architecture using \textbf{RabbitMQ} and \textbf{Redis}, enabling asynchronous communication, decoupled microservices, and real-time status tracking across the audiobook generation pipeline.}
+    \vspace{-5pt}
+    \resumeItem{Cloud Infrastructure Design}{Deployed infrastructure on \textbf{Google Kubernetes Engine (GKE)}, enabling automated scaling and efficient task processing.}
+    \vspace{-5pt}
+     \resumeItem{User Interface Development}{Built a \textbf{Flask-based web interface} for user uploads, status tracking, and downloading chapter-wise audiobooks.}
+     \vspace{-5pt}
+    \resumeItem{Storage And File Management}{Integrated \textbf{Google Cloud Storage} for managing intermediate and final audiobook files.}
+     \vspace{-5pt}
+    \resumeItem{Performance Optimization}{Optimized workflows with parallel processing for reduced latency on large inputs.}
+    
+\resumeItemListEnd
+
+\resumeSubHeadingListStart
+    \resumeSubheading{MoodyTunes}{}{A DL-based Music Mood Classifier}{}
+\resumeSubHeadingListEnd
+\resumeItemListStart
+\resumeItem{Project Overview}{Developed a deep learning-based system to classify songs into emotional moods—happy, sad, calm, and energetic—using enriched datasets and advanced architectures.}
+\vspace{-5pt}
+
+\resumeItem{Data Enrichment}{Enhanced a subset of the Spotify 278k dataset by incorporating user-generated tags from Last.fm and audio features extracted from 30-second clips using the Spotify API.}
+\vspace{-5pt}
+
+\resumeItem{Model Development}{Implemented and optimized various deep learning architectures, including ANN, RCNN, and LSTM, achieving a peak accuracy of 90.67\%.}
+\vspace{-5pt}
+
+\resumeItem{Exploratory Data Analysis}{Performed extensive exploratory data analysis to validate dataset quality and identify mood-specific patterns across audio features such as MFCCs, spectral contrast, and loudness.}
+\resumeItemListEnd
+
+%-----------Publications-----------------
+% \section{Publications}
+
+
+% %-----------Responsibilities-----------------
+% \vspace{-5pt}
+% \section{Responsibilities}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%     {Student Desktop Support Technician}{Boulder, CO, USA}{Office of Information Technology, CU Boulder (Part-time)}{November 2024 - Present}
+%     \resumeItemListStart
+%         \resumeItemWithoutTitle{}
+%           {Supported clients across Linux, macOS, and Windows platforms, resolving hardware and software issues, setting up new computers, ensuring seamless account access, and performing essential repairs to maximize productivity.}
+%     \resumeItemListEnd
+    
+%     \resumeSubheading
+%     {Quark Coordinator}{Goa, India}{Department of Photography, BITS Pilani Goa Campus}{April 2020 - July 2021}
+%     \resumeItemListStart
+%         \resumeItemWithoutTitle{}
+%           {Led coordination efforts with fest committees and mentored a team of 60+ juniors, fostering collaboration and ensuring smooth execution of festival activities.}
+%     \resumeItemListEnd
+
+
+% \resumeSubHeadingListEnd
+
+% %-----------Awards-----------------
+% \section{Honors and Awards}
+% \begin{description}[font=$\bullet$]
+% \item {Secured an \textbf{All-India rank of 6 among 95,400} students in the COMEDK Undergraduate Entrance Test 2018}
+% \end{description}
+% \vspace{-5pt}
+
+\end{document}
